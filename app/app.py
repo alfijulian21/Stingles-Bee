@@ -11,39 +11,7 @@ st.set_page_config(
     layout="centered"
 )
 
-# CSS
-
-st.markdown(
-    """
-    <style>
-    .centered {
-        text-align: center;
-    }
-
-    h1.centered {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 100%;
-        font-size: clamp(22px, 4.5vw, 40px);
-        line-height: 1.1;
-        margin-top: -1em;
-        margin-bottom: 1em;
-    }
-
-    h3.centered {
-        font-size: clamp(14px, 2.2vw, 22px);
-        margin-top: -2.5em;
-        margin-bottom: 5em;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-
 # Helper Format persentase
-
 def format_percent(value: float) -> str:
     val = round(value, 2)
     if val.is_integer():
@@ -57,7 +25,6 @@ def format_percent(value: float) -> str:
 # API Endpoint
 
 API_URL = "http://localhost:5000/predict"
-
 
 st.markdown("<h1 class='centered'>🐝</h1>", unsafe_allow_html=True)
 st.markdown("<h1 class='centered'>Klasifikasi Lebah Madu Tanpa Sengat</h1>", unsafe_allow_html=True)
